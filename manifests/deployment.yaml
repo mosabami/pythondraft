@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pythondraft
+  labels:
+    app: pythondraft
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pythondraft
+  template:
+    metadata:
+      labels:
+        app: pythondraft
+    spec:
+      containers:
+        - name: pythondraft
+          image: pythondraft
+          ports:
+            - containerPort: 2000
