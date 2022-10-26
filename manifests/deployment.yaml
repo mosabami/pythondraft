@@ -1,21 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pythondraft
+  creationTimestamp: null
   labels:
     app: pythondraft
+  name: pythondraft
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: pythondraft
+  strategy: {}
   template:
     metadata:
+      creationTimestamp: null
       labels:
         app: pythondraft
     spec:
       containers:
-        - name: pythondraft
-          image: pythondraft
-          ports:
-            - containerPort: 2000
+      - image: crazk8s73xqvx6p5mbq5gvzo.azurecr.io/pythondraft
+        name: pythondraft
+        ports:
+        - containerPort: 2000
+        resources: {}
+status: {}
