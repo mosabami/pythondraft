@@ -18,7 +18,7 @@ spec:
         app: pythondraft
     spec:
       containers:
-      - image: crazk8s73xqvx6p5mbq5gvzo.azurecr.io/pythondraft
+      - image: crazk8s73xqvx6p5mbq5gvzo.azurecr.io/pythondraft:250dfc7e3bc0550ac4864bf92ae24aa1d60f1211
         name: pythondraft
         ports:
         - containerPort: 2000
